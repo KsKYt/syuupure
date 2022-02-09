@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+
+
+/* mainpage */
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3bade3, #9844b7, #44ea76);
+  /*グラデーションを定義*/
+  background-size: 200% 200%;
+  /*サイズを大きくひきのばす*/
+  animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.top-text {
+  font-family: 'Yusei Magic', sans-serif;
+  margin: 200px 0 0px 100px;
+  font-size: 60px;
+  letter-spacing: 4px;
+  color: #fffacd;
+
+}
+
+.top-text__img {
+  margin-top: 50px;
+}
+
+span.smoothText {
+  overflow: hidden;
+  display: block;
+}
+
+span.smoothTextTrigger {
+  transition: .8s ease-in-out;
+  transform: translate3d(0, 100%, 0) skewY(12deg);
+  transform-origin: left;
+  display: block;
+}
+
+span.smoothTextTrigger.smoothTextAppear {
+  transform: translate3d(0, 0, 0) skewY(0);
+}
+
+
+.middle-text {
+  font-family: 'Yusei Magic', sans-serif;
+  margin: 500px 0 0 100px;
+  color: #fffacd;
+}
+
+.middle-text h2 {
+
+  letter-spacing: 4px;
+  font-size: 60px;
+}
+
+.middle-text p {
+  margin-top: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  font-size: 30px;
+}
+
+.bottom-text {
+  font-family: 'Yusei Magic', sans-serif;
+  margin: 500px 0 0 100px;
+color: #fffacd;
+}
+
+.bottom-text h2 {
+  letter-spacing: 4px;
+  font-size: 60px;
+}
+
+.bottom-text p {
+  margin-top: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  font-size: 30px;
+}
+
+.login-box {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  display: inline-block;
+  padding: 10px 30px;
+  color: #333;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  outline: none;
+  /*はみ出す背景色を隠す*/
+  overflow: hidden;
+}
+
+.login-box :hover {
+
+  border-color: transparent;
+  /*色の変化を遅らせる*/
+  transition-delay: .6s;
+}
+
+.login-box span {
+  display: block;
+  z-index: 2;
+}
+
+.border span::before,
+.border span::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  width: 0;
+  height: 1px;
+  /*線の形状*/
+  background: #333;
+  /*アニメーションの設定*/
+  transition: all .3s;
+}
+
+.border span::before {
+  left: 0;
+  top: 0;
+}
+
+.border span::after {
+  left: 0;
+  bottom: 0;
+}
+
+.border:hover span::before,
+.border:hover span::after {
+  width: 100%;
+}
+
+
+.border::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+
+  height: 100%;
+  width: 0;
+  background: #f07d19;
+
+  transition: all .3s;
+}
+
+.border:hover::before {
+  width: 100%;
+
+  transition-delay: .4s;
+}
+
+.link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.link :hover {
+  transition: ease 1.7s;
+  color: #fff;
+}
+
+
+
+
+
+strong {
+  font-weight: bold;
+}
+
+/* ヘッダー */
+.header-top {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+}
+
+.header-top__img img {
+  height: 50px;
+  float: left;
+}
+
+.navigation-main {
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 170px;
+  font-size: 12px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  width: 266px;
+}
+
+.right {
+
+  width: 166px;
+  font-size: 12px;
+}
+
+.right a {
+  text-decoration: none;
+}
+
+.linkb {
+  margin-left: 10px;
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  border: 0.5px solid #555;
+  /* ボーダーの色と太さ */
+  border-radius: 20px;
+  padding: 10px 30px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease .2s;
+}
+
+
+
+.linkb span {
+  position: relative;
+  z-index: 3;
+  color: rgb(0, 0, 0);
+}
+
+.linkb:hover span {
+  transition: ease 1s;
+  color: #fff;
+}
+
+.bgleft:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  background: #f07d19;
+  width: 100%;
+  height: 100%;
+
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+
+.bgleft:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+
+/* フッター */
+.footer {
+  margin-top: 100px;
+  display: flex;
+
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+
+}
+
+.navigation-footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgb(238, 238, 238);
+  padding-bottom: 5px;
+}
+
+.navigation-footer__item {
+  display: flex;
+}
+
+.navigation-footer__item li {
+  margin: 0 20px 20px 0;
+}
+
+.navigation-footer__item a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 50px;
+}
+
+/* 投稿画像 */
+
+.content img {
+  width: 200px;
+}
+
+.view-content {
+  margin-bottom: 200px;
+}
+
+/* top1 */
+.top-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.linkc {
+  margin: 200px 0 200px 0;
+}
+
+.mv img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.linkc a {
+  font-size: 60px;
+  text-decoration: none;
+}
+
+.linkc {
+  margin-left: 10px;
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  border: 0.5px solid #555;
+  /* ボーダーの色と太さ */
+  border-radius: 20px;
+  padding: 10px 30px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease .2s;
+}
+
+
+
+.linkc span {
+  position: relative;
+  z-index: 3;
+  color: rgb(0, 0, 0);
+}
+
+.linkc:hover span {
+  transition: ease 1s;
+  color: #fff;
+}
+
+.bgleft:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  background: #f07d19;
+  width: 100%;
+  height: 100%;
+
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+
+.bgleft:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
+/* 投稿一覧 */
+.post-header {
+  font-size: 60px;
+  margin: 70px 0 70px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.view-content {
+  display: flex;
+  align-content: space-around;
+  width: 100%;
+
+}
+
+.view-content__in {
+  width: 600px;
+}
+
+/* 認証画面 */
+.app-head{
+display: flex;
+justify-content: space-between;
+background-color: #fffacd;
+height: 80px;
+
+}
+.navbar-toggler{
+  height: 25px;
+  margin-top: ;
+}
+.navbar-toggler a{
+  text-decoration: none;
+}
+.back{
+  height: 10px;
+}
+.navbar-toggler-icon{
+  height: 10px;
+}
+.navbar-toggler-icon a{
+ 
+  text-decoration: none;
+}
+.nav-item a{
+  margin: 10px;
+text-decoration: none;
+  }
