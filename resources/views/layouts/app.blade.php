@@ -26,11 +26,15 @@
             <div class="container">
      
                <div class="app-head">
+               <div class="nav-back">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon"></span>
-                        <a class="back" href="{{ url('/top1') }}">
-                            {{ config('戻る', '戻る') }}
-                        </a>
+                            
+                   
+                            <a class="back" href="{{ url('/top1') }}">
+                                {{ config('戻る', '戻る') }}
+                            </a>
+                   </div>
                        
                         </button>
         

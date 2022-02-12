@@ -436,16 +436,26 @@ height: 80px;
   text-decoration: none;
 }
 .back{
+
   height: 10px;
 }
 .navbar-toggler-icon{
   height: 10px;
 }
-.navbar-toggler-icon a{
- 
-  text-decoration: none;
+.nav-back {
+display: flex;
+align-items: center;
 }
 .nav-item a{
   margin: 10px;
 text-decoration: none;
+  }
+  .navbar-nav {
+display: flex;
+flex-direction: row;
+align-items: center;
+  }
+  .collapse{
+    display: flex;
+    align-items: center;
   }
