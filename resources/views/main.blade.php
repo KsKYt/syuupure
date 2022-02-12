@@ -13,7 +13,7 @@
     <title>Movie Sport</title>
 </head>
 
-<body>
+<body class="main-bg">
     <header class="header-top">
 
         <div class="header-top__img">
