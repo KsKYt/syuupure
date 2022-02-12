@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('layout');
+    return view('main');
 });
 
 Route::get('/top1', function () {

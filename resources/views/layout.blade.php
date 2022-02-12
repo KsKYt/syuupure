@@ -33,6 +33,9 @@
             @if (Route::has('login'))
             <div>
                 @auth
+                <div id="navbarDropdown" class="nav-link" >
+                                            <p class="username">{{ Auth::user()->name }}さん</p>
+</div>
                 <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><span>ログアウト</span></a>
                 @else
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><span>ログイン</span></a>

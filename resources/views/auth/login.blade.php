@@ -5,17 +5,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('ログイン') }}</div>
+             <p class="login-top">  ログイン</p>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Eメール') }}</label>
+                        <div class="login-email">
+                        <div class="login-email-in">
+                            <label for="email" class="login-titl"><p>Eメール</p></label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                           
+                                <input id="email" type="email" class="form-control-e @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -25,11 +26,17 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        <div class="login-email">
+                        <div class="login-email-in">
+                            <label for="password" class="login-titl"><p>パスワード</p></label>
+                            @if (Route::has('password.request'))
+                                  <div class="pass-btn">
+                                        <a class="pass-btn-in" href="{{ route('password.request') }}">
+                                            <p class="pass-forget">パスワードを忘れましたか？</p>
+                                        </a>
+                                  </div>
+                           
+                                <input id="password" type="password" class="form-control-p @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -40,29 +47,28 @@
                         </div>
 
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="memo">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('記憶する') }}
+                                       <p> 記憶する</p>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('ログイン') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('パスワードを忘れましたか？') }}
-                                    </a>
+                            <div class="login-btn">
+                                <div class="login-submit">
+                                    <button type="submit" class="login-btn-in bgleft">
+                                    <span>{{ __('ログイン') }}</span>
+                                    </button>
+                                </div>
+                                </div>
+                              
                                 @endif
-                            </div>
+                           
                         </div>
                     </form>
                 </div>
