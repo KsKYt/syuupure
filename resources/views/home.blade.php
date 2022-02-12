@@ -18,12 +18,14 @@
 
                 </div>
            
-                    <p class="logout-text">ログアウトしますか？</p>
-                 
-                    <div class="login-content"> <a class="login-item bgleft" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
-                        <span> {{ __('ログアウト') }}</span>
-                    </a>   </div>
+                 <div class="content-logout">
+                        <p class="logout-text">ログアウトしますか？</p>
+                     
+                        <div class="login-content"> <a class="login-item bgleft" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();">
+                            <span> {{ __('ログアウト') }}</span>
+                        </a>   </div>
+                 </div>
 
               </p> 
 

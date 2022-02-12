@@ -31,8 +31,8 @@
                             <span class="navbar-toggler-icon"></span>
                             
                    
-                            <a class="back" href="{{ url('/top1') }}">
-                                {{ config('戻る', '戻る') }}
+                            <a class="back linkb bgleft" href="{{ url('/top1') }}">
+                                <span>{{ config('戻る', '戻る') }}</span>
                             </a>
                    </div>
                      
@@ -49,23 +49,23 @@
                                 @guest
                                     @if (Route::has('login'))
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                            <a class="nav-link linkb bgleft" href="{{ route('login') }}"><span>{{ __('ログイン') }}</span></a>
                                         </li>
                                     @endif
         
                                     @if (Route::has('register'))
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('会員登録') }}</a>
+                                            <a class="nav-link linkb bgleft" href="{{ route('register') }}"><span>{{ __('会員登録') }}</span></a>
                                         </li>
                                     @endif
                                 @else
                              
         
                                         <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                            <a class="dropdown-item linkb bgleft" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
-                                                {{ __('ログアウト') }}
+                                              <span>  {{ __('ログアウト') }}</span>
                                             </a>
     
            

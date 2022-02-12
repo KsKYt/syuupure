@@ -216,8 +216,11 @@ strong {
 
 .right {
 
-  width: 166px;
+width: 100px;
   font-size: 12px;
+}
+.nav-link{
+  width: 100px;
 }
 
 .right a {
@@ -471,7 +474,7 @@ align-items: center;
    display: flex;
    justify-content: center;
    font-size: 30px;
-   margin-top: 100px;
+   margin-top: 300px;
  }
 
  .login-item{
@@ -542,6 +545,7 @@ transform:scale(1, 1);
   margin-top: 10px;
 }
 .card-body{
+  height: 100%;
   width: 100%;
 }
 .login-email{
@@ -575,10 +579,8 @@ align-items: center;
 .pass-btn{
   margin-left: 5px;
 }
-.login-submit{
-
-}
 .login-btn-in{
+  cursor: pointer;
   margin-top: 10px;
   background-color: #fff;
 }
@@ -588,7 +590,9 @@ align-items: center;
 }
 
 
-
+.dropdown-item{
+  margin-right: 10px;
+}
 
 
 
