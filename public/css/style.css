@@ -414,13 +414,16 @@ width: 100px;
 
 .view-content {
   display: flex;
-  align-content: space-around;
+ flex-direction: column;
+
   width: 100%;
 
 }
 
 .view-content__in {
-  width: 600px;
+display: flex;
+justify-content: center;
+  width: 100%
 }
 
 /* 認証画面 */
@@ -649,3 +652,26 @@ transform-origin:left top;
 transform:scale(1, 1);
 }
 
+.content-view{
+ 
+  text-align: center;
+  width: 690px;
+  height: 487px;
+  background-color: #f2f2f2;
+  border: 0.5px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+.content-post{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.pagination{
+  text-align: center;
+}
+
+.pagination li{
+display: inline;
+}
