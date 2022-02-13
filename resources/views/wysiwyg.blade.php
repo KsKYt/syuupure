@@ -10,6 +10,7 @@
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
 
 
 <body>
@@ -73,7 +74,7 @@
                     <p>&nbsp;</p>
                 
                     <button type="submit" class="submitbtn login-btn-in bgleft"" name="subbtn">    
-<p><span>投稿する</span></p>
+<span>投稿する</span>
                     </button>
                 </form>
 
