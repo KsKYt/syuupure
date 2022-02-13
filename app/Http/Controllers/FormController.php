@@ -33,7 +33,7 @@ if($request->post_img){
         return redirect ('/index');
        }
        public function index (Request $request){
-        $data = Form::orderBy('created_at', 'desc')->paginate(3);
+        $data = Form::orderBy('created_at', 'desc')->paginate(6);
         return view('post')->with(['data' => $data]);
       }
 

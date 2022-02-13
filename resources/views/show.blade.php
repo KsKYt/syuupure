@@ -4,52 +4,70 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
-        <link rel="stylesheet" type="text/css" href="{{asset('css/reset.css')}}">
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
     <header class="header-top">
         <div class="header-top__img">
-       <a href="/top1"> <img src="/storage/post_img/logo.png" alt="logo"></a>
+            <a href="/top1"> <img src="/storage/post_img/logo.png" alt="logo"></a>
         </div>
-  
 
-            <nav class="navigation-main">
 
-                <div class="left">
-                <a href="/index">募集を探す</a>
+        <nav class="navigation-main">
 
-<a href="/create2">  募集をする</a>
-</nav>
 
-                    <div class="right">
-                        @if (Route::has('login'))
-                        <div>
-                            @auth
-                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">ログアウト</a>
-                            @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">ログイン</a>
+            <div class="left">
+                <a href="/index" class="linkb bgleft"><span>募集を探す</span></a>
 
-                            @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">会員登録</a>
-                            @endif
-                            @endauth
-                        </div>
-                        @endif
-                    </div>
-            </nav>
+                <a href="/create2" class="linkb bgleft"> <span>募集をする</span></a>
+            </div>
+
+        </nav>
+        <div>
+                @auth
+                <div id="navbarDropdown" class="nav-link" >
+                                            <p class="username">{{ Auth::user()->name }}さん</p></div>
+</div>
+        <div class="right linkb bgleft">
+            
+            @if (Route::has('login'))
+           
+                <a href="{{ url('/home') }}" class="login-out"><span>ログアウト</span></a>
+                @else
+                <a href="{{ route('login') }}" class="lgoin"><span>ログイン</span></a>
+
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="login"><span>会員登録</span></a>
+                @endif
+                @endauth
+            </div>
+            @endif
+        </div>
+     
     </header>
     <div class="wrapper">
         <div class="header">
-            <h1>募集詳細</h1>
+            <h1 class="login-top">募集詳細</h1>
         </div>
        
 
-        <div class="content3">
+        <div class="content-show">
         <p class="created">{{$data->created_at}}</p>
         <h1>{{$data->title}}</h1>
         <hr>
         <p>{!! nl2br($data->main)!!}</p>
+            
+        @if(file_exists(public_path().'/storage/post_img/'. $data->id .'.jpg'))
+                <img src="/storage/post_img/{{ $data->id }}.jpg">
+            @elseif(file_exists(public_path().'/storage/post_img/'. $data->id .'.jpeg'))
+                <img src="/storage/post_img/{{ $data->id }}.jpeg">
+            @elseif(file_exists(public_path().'/storage/post_img/'. $data->id .'.png'))
+                <img src="/storage/post_img/{{ $data->id }}.png">
+            @elseif(file_exists(public_path().'/storage/post_img/'. $data->id .'.gif'))
+                <img src="/storage/post_img/{{ $data->id }}.gif">
+            @endif
         </div>
 
       

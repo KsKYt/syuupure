@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 
-
+body{
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
 /* mainpage */
 .main-bg {
   width: 100%;
