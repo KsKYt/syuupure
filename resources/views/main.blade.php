@@ -17,7 +17,7 @@
     <header class="header-top">
 
         <div class="header-top__img">
-            <a href="/top1"> <img src="/storage/post_img/logo.png" alt="logo"></a>
+            <a href="/top1"> <img src="/public/images/logo.png" alt="logo"></a>
         </div>
 
     </header>
@@ -25,7 +25,7 @@
     <div class="top-text">
         <h1><span class="smoothText"><span class="smoothTextTrigger">映画を作りたい、すべての人へ。</h1></span></span>
         <div class="top-text__img">
-            <a href="/top1"> <img src="/storage/post_img/logo.png" alt="logo"></a>
+            <a href="/top1"> <img src="/public/images/logo.png" alt="logo"></a>
         </div>
     </div>
 
