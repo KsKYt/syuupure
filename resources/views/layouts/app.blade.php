@@ -6,9 +6,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel=”stylesheet” href=”https://KsKYt.github.io/syuupure/style.css”/>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
