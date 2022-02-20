@@ -659,13 +659,21 @@ transform:scale(1, 1);
  
   text-align: center;
   width: 690px;
-  height: 487px;
+  min-height: 487px;
   background-color: #f2f2f2;
   border: 0.5px solid #000;
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
 }
+.content-view img{
+margin-top: 30px;
+width: 90%;
+
+object-fit: cover;
+}
+
+
 .content-post{
 display: flex;
 flex-wrap: wrap;
@@ -696,9 +704,11 @@ font-size: 30px;
   min-height: 800px;
 }
 .content-show img{
+margin: 10px 0 0 45px;
 width: 600px;
 max-height: 500px;
 object-fit: cover;
+
 }
 .content2{
  margin: 0 auto;

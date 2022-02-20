@@ -14,7 +14,7 @@
                <div class="content-view">
                     <h1><a href="/show/{{$datas->id}}" class="post-title">{{$datas->title}}</a></h1>
             
-                    <p>{!! nl2br(e(Str::limit($datas->main, 50))) !!}</p>
+                    <p>{!! nl2br($datas->main) !!}</p>
                 
             
                     @if(file_exists(public_path().'/storage/post_img/'. $datas->id .'.jpg'))
