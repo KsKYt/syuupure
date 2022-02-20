@@ -31,7 +31,7 @@
                             <span class="navbar-toggler-icon"></span>
                             
                    
-                            <a class="back linkb bgleft" href="{{ url('/top1') }}">
+                            <a class="linkb bgleft" href="{{ url('/top1') }}">
                                 <span>{{ config('戻る', '戻る') }}</span>
                             </a>
                    </div>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div>
             <div class="card">
                 <div class="login-top"><p>会員登録</p></div>
 
@@ -13,9 +13,9 @@
 
                         <div class="login-email">
                             <div class="login-email-in">
-                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ユーザー名') }}</label>
+                                <label for="name" class= "text-md-end">{{ __('ユーザー名') }}</label>
     
-                                <div class="col-md-6">
+                                <div class="">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
     
                                     @error('name')
@@ -29,9 +29,9 @@
 
                         <div class="login-email">
                             <div class="login-email-in">
-                                <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Eメール') }}</label>
+                                <label for="email" class=" text-md-end">{{ __('Eメール') }}</label>
     
-                                <div class="col-md-6">
+                                <div>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     
                                     @error('email')
@@ -45,9 +45,9 @@
 
                        <div class="login-email">
                             <div class="login-email-in">
-                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
+                                <label for="password" class="  text-md-end">{{ __('パスワード') }}</label>
     
-                                <div class="col-md-6">
+                                <div>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
     
                                     @error('password')
@@ -60,10 +60,10 @@
                        </div>
 
                        <div class="login-email">
-                            <div class="login-email-in login-email-in-r">
+                            <div class=" login-email-in">
                                 <label for="password-confirm" class="password-confirm">{{ __('もう一度パスワードを入力してください') }}</label>
     
-                                <div class="col-md-6">
+                                <div class="">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
