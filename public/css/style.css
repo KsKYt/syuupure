@@ -98,16 +98,13 @@ span.smoothTextTrigger.smoothTextAppear {
 }
 
 .login-box {
-  /*線の基点とするためrelativeを指定*/
   position: relative;
-  /*ボタンの形状*/
   display: inline-block;
   padding: 10px 30px;
   color: #333;
   border: 1px solid #ccc;
   text-decoration: none;
   outline: none;
-  /*はみ出す背景色を隠す*/
   overflow: hidden;
 }
 
@@ -356,19 +353,15 @@ strong {
 
 .linkc {
   margin-left: 10px;
-  /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
   overflow: hidden;
-  /*ボタンの形状*/
   text-decoration: none;
   display: inline-block;
   border: 0.5px solid #555;
-  /* ボーダーの色と太さ */
   border-radius: 20px;
   padding: 10px 30px;
   text-align: center;
   outline: none;
-  /*アニメーションの指定*/
   transition: ease .2s;
 }
 
