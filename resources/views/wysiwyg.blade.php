@@ -73,7 +73,7 @@
                     <input type="hidden" name="main">
                     <p>&nbsp;</p>
                 
-                    <button type="submit" class="submitbtn login-btn-in bgleft"" name="subbtn">    
+                    <button type="submit" class="submitbtn login-btn-in bgleft" name="subbtn">    
 <span>投稿する</span>
                     </button>
                 </form>

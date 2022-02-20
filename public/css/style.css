@@ -433,7 +433,7 @@ justify-content: center;
 .app-head{
 display: flex;
 justify-content: space-between;
-background-color: #fffacd;
+background-color: #eee;
 height: 80px;
 
 }
@@ -492,25 +492,23 @@ align-items: center;
 
 
  .login-item{
-  /*アニメーションの起点とするためrelativeを指定*/
+  
   position: relative;
 overflow: hidden;
-  /*ボタンの形状*/
+  
 text-decoration: none;
 display: inline-block;
 border-radius: 10px;
-   border: 1px solid #555;/* ボーダーの色と太さ */
-  padding: 10px 30px;
+   border: 1px solid #555;
   text-align: center;
   outline: none;
-  /*アニメーションの指定*/   
+    
   transition: ease .2s;
 }
 
-/*ボタン内spanの形状*/
 .login-item span {
 position: relative;
-z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+z-index: 3;
 color:#333;
 }
 
@@ -519,25 +517,25 @@ color:#fff;
 transition: ease 1s;
 }
 
-/*== 背景が流れる（左から右） */
+
 .bgleft:before {
  content: '';
-  /*絶対配置で位置を指定*/
+
  position: absolute;
  top: 0;
  left: 0;
  z-index: 2;
-  /*色や形状*/
- background:#f07d19;/*背景色*/
+
+ background:#f07d19;
  width: 100%;
 height: 100%;
-  /*アニメーション*/
+
  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
  transform: scale(0, 1);
 transform-origin: right top;
 }
 
-/*hoverした際の形状*/
+
 .bgleft:hover:before{
 transform-origin:left top;
 transform:scale(1, 1);
@@ -594,7 +592,9 @@ align-items: center;
 .pass-forget{
   font-size: 12px;
 }
-
+.form login-email{
+  margin: 0 auto;
+}
 
 .dropdown-item{
   margin-right: 10px;
@@ -604,25 +604,25 @@ align-items: center;
 }
 
 .login-btn-in{
-  /*アニメーションの起点とするためrelativeを指定*/
+
   position: relative;
 overflow: hidden;
-  /*ボタンの形状*/
+
 text-decoration: none;
 display: inline-block;
 border-radius: 10px;
-   border: 1px solid #555;/* ボーダーの色と太さ */
+   border: 1px solid #555;
   padding: 10px 30px;
   text-align: center;
   outline: none;
-  /*アニメーションの指定*/   
+  
   transition: ease .2s;
 }
 
-/*ボタン内spanの形状*/
+
 .login-btn-in span {
 position: relative;
-z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+z-index: 3;
 color:#333;
 }
 
@@ -631,25 +631,25 @@ color:#fff;
 transition: ease 1s;
 }
 
-/*== 背景が流れる（左から右） */
+
 .bgleft:before {
  content: '';
-  /*絶対配置で位置を指定*/
+
  position: absolute;
  top: 0;
  left: 0;
  z-index: 2;
-  /*色や形状*/
- background:#f07d19;/*背景色*/
+  
+ background:#f07d19;
  width: 100%;
 height: 100%;
-  /*アニメーション*/
+
  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
  transform: scale(0, 1);
 transform-origin: right top;
 }
 
-/*hoverした際の形状*/
+
 .bgleft:hover:before{
 transform-origin:left top;
 transform:scale(1, 1);
@@ -672,7 +672,18 @@ width: 90%;
 
 object-fit: cover;
 }
+.post-title{
+  color: #000;
+  text-decoration: none;
+  font-size: 40px;
 
+}
+.post-title:hover{
+  opacity: 0.6;
+}
+.content-view p{
+  margin-top: 20px;
+}
 
 .content-post{
 display: flex;
@@ -681,12 +692,25 @@ justify-content: center;
 }
 .pagination{
   text-align: center;
+
 }
 
 .pagination li{
+  
 display: inline;
+font-size: 20px;
+margin: 0 3px 0 3px;
+padding: 5px;
+color: #000;
+border:  #000 solid 0.3px;
+background-color: #f3f3f3;
 }
+.pagination a{
+  color: #f07d19;
+  text-decoration: none;
 
+
+}
 .created{
   margin-top: 50px;
 }
