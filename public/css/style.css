@@ -10,9 +10,9 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, #3bade3, #9844b7, #44ea76);
-  /*グラデーションを定義*/
+ 
   background-size: 200% 200%;
-  /*サイズを大きくひきのばす*/
+
   animation: bggradient 20s ease infinite;
 }
 
@@ -114,7 +114,7 @@ span.smoothTextTrigger.smoothTextAppear {
 .login-box :hover {
 
   border-color: transparent;
-  /*色の変化を遅らせる*/
+
   transition-delay: .6s;
 }
 
@@ -126,13 +126,13 @@ span.smoothTextTrigger.smoothTextAppear {
 .border span::before,
 .border span::after {
   content: '';
-  /*絶対配置で線の位置を決める*/
+
   position: absolute;
   width: 0;
   height: 1px;
-  /*線の形状*/
+
   background: #333;
-  /*アニメーションの設定*/
+
   transition: all .3s;
 }
 
@@ -234,19 +234,19 @@ strong {
 
 .linkb {
   margin-left: 10px;
-  /*アニメーションの起点とするためrelativeを指定*/
+
   position: relative;
   overflow: hidden;
-  /*ボタンの形状*/
+
   text-decoration: none;
   display: inline-block;
   border: 0.5px solid #555;
-  /* ボーダーの色と太さ */
+
   border-radius: 20px;
   padding: 10px 30px;
   text-align: center;
   outline: none;
-  /*アニメーションの指定*/
+
   transition: ease .2s;
 }
 
