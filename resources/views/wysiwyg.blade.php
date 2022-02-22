@@ -14,7 +14,7 @@
 
 
 <body>
-<header class="header-top">
+    <header class="header-top">
         <div class="header-top__img">
             <a href="/top1"> <img src="/storage/post_img/logo.png" alt="logo"></a>
         </div>
@@ -25,56 +25,54 @@
 
             <div class="left">
                 <a href="/index" class="linkb bgleft"><span>募集を探す</span></a>
-
                 <a href="/create2" class="linkb bgleft"> <span>募集をする</span></a>
             </div>
 
         </nav>
         <div>
-                @auth
-                <div id="navbarDropdown" class="nav-link" >
-                                            <p class="username">{{ Auth::user()->name }}さん</p></div>
-</div>
-        <div class="right linkb bgleft">
-            
-            @if (Route::has('login'))
-           
-                <a href="{{ url('/home') }}" class="login-out"><span>ログアウト</span></a>
-                @else
-                <a href="{{ route('login') }}" class="lgoin"><span>ログイン</span></a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="login"><span>会員登録</span></a>
-                @endif
-                @endauth
+            @auth
+            <div id="navbarDropdown" class="nav-link">
+                <p class="username">{{ Auth::user()->name }}さん</p>
             </div>
-            @endif
         </div>
-     
+        <div class="right linkb bgleft">
+
+            @if (Route::has('login'))
+
+            <a href="{{ url('/home') }}" class="login-out"><span>ログアウト</span></a>
+            @else
+            <a href="{{ route('login') }}" class="lgoin"><span>ログイン</span></a>
+
+           
+            @endauth
+        </div>
+        @endif
+        </div>
+
     </header>
 
 
 
     <div class="header-">
-            <h1 class="login-top">投稿</h1>
-        </div>
+        <h1 class="login-top">投稿</h1>
+    </div>
     <div class="wrapper-post">
-       
+
         <div class="content_wrapper">
             <div class="content2">
 
                 <form action="/newpostsend" method="post" name="ansform" enctype="multipart/form-data">
                     @csrf
-                    <p class="post-title">タイトル</p>
+                    <p class="title">タイトル</p>
                     <input type="text" name="title" class="formtitle">
                     <p>&nbsp;</p>
                     <p>本文</p>
                     <div id="editor" style="height: 200px;"></div>
                     <input type="hidden" name="main">
                     <p>&nbsp;</p>
-                
-                    <button type="submit" class="submitbtn login-btn-in bgleft" name="subbtn">    
-<span>投稿する</span>
+
+                    <button type="submit" class="submitbtn login-btn-in bgleft" name="subbtn">
+                        <span>投稿する</span>
                     </button>
                 </form>
 
@@ -103,11 +101,6 @@
             modules: {
                 toolbar: [
                     ['image', 'video'],
-                    [{
-                     
-                    }, {
-           
-                    }]
                 ]
             },
             placeholder: 'Write your question here...',

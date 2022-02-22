@@ -7,10 +7,14 @@
 
 <div class="top-content">
     <div class=" linkc cre bgleft">
-    <span><a href="/index"><p><span>募集を探す</span></p></a></span>
+        <span><a href="/index">
+                <p><span>募集を探す</span></p>
+            </a></span>
     </div>
     <div class="linkc cre bgleft">
-    <span><a href="/create2"> <p> <span>募集をする</span></p></a></span>
+        <span><a href="/create2">
+                <p> <span>募集をする</span></p>
+            </a></span>
     </div>
 </div>
 @endsection

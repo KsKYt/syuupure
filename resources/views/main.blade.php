@@ -37,7 +37,7 @@
                 <p>あなたの作りたいを応援する、それが「Movie Support」です。<br>
             </span></span>
         <span class="smoothText"><span class="smoothTextTrigger">「Movie Support」は、映像制作を行う人のためのマッチングプラットフォームです。</p></span></span>
-   
+
 
 
         <div class="login-box border">
@@ -136,10 +136,10 @@
             });
         }
 
-        
+
         $(window).scroll(function() {
-            SmoothTextAnime(); 
-        }); 
+            SmoothTextAnime();
+        });
 
         // 画面が読み込まれたらすぐに動かしたい場合の記述
         $(window).on('load', function() {

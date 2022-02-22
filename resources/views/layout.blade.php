@@ -30,26 +30,27 @@
 
         </nav>
         <div>
-                @auth
-                <div id="navbarDropdown" class="nav-link" >
-                                            <p class="username">{{ Auth::user()->name }}さん</p></div>
-</div>
-        <div class="right linkb bgleft">
-            
-            @if (Route::has('login'))
-           
-                <a href="{{ url('/home') }}" class="login-out"><span>ログアウト</span></a>
-                @else
-                <a href="{{ route('login') }}" class="lgoin"><span>ログイン</span></a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="login"><span>会員登録</span></a>
-                @endif
-                @endauth
+            @auth
+            <div id="navbarDropdown" class="nav-link">
+                <p class="username">{{ Auth::user()->name }}さん</p>
             </div>
-            @endif
         </div>
-     
+        <div class="right linkb bgleft">
+
+            @if (Route::has('login'))
+
+            <a href="{{ url('/home') }}" class="login-out"><span>ログアウト</span></a>
+            @else
+            <a href="{{ route('login') }}" class="lgoin"><span>ログイン</span></a>
+
+            @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="login"><span>会員登録</span></a>
+            @endif
+            @endauth
+        </div>
+        @endif
+        </div>
+
     </header>
 
 

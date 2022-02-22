@@ -17,21 +17,21 @@
                     @endif
 
                 </div>
-           
-                 <div class="content-logout">
-                        <p class="logout-text">ログアウトしますか？</p>
-                     
-                        <div class="login-content"> <a class="login-item bgleft" href="{{ route('logout') }}" onclick="event.preventDefault();
+
+                <div class="content-logout">
+                    <p class="logout-text">ログアウトしますか？</p>
+
+                    <div class="login-content"> <a class="login-item bgleft" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                      document.getElementById('logout-form').submit();">
                             <span> {{ __('ログアウト') }}</span>
-                        </a>   </div>
-                 </div>
+                        </a> </div>
+                </div>
 
-              </p> 
+                </p>
 
-           
+
+            </div>
         </div>
     </div>
-</div>
 </div>
 @endsection
