@@ -633,7 +633,7 @@ strong {
   width: 690px;
   min-height: 487px;
   background-color: #f2f2f2;
-  border: 0.5px solid #000;
+  border: 0.1px solid rgb(177, 177, 177);
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
@@ -645,18 +645,22 @@ strong {
   object-fit: cover;
 }
 
-.post-title {
+.content-view a {
   color: #000;
   text-decoration: none;
+}
+
+.post-title h1 {
   font-size: 40px;
 }
 
 .post-title:hover {
-  opacity: 0.6;
+  color: #f07d19;
 }
 
 .content-view p {
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .content-post {

@@ -12,9 +12,9 @@
 
 
         <div class="content-view">
-            <h1><a href="/show/{{$datas->id}}" class="post-title">{{$datas->title}}</a></h1>
+        <a href="/show/{{$datas->id}}" class="post-title"> <h1>{{$datas->title}}</h1>
 
-            <p>{!! nl2br($datas->main) !!}</p>
+            <p>{!! nl2br($datas->main) !!}</p></a>
 
 
             @if(file_exists(public_path().'/storage/post_img/'. $datas->id .'.jpg'))
