@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Movie Sport</title>
 </head>
 
 <body>
